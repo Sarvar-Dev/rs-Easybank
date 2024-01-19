@@ -1,3 +1,40 @@
+:root{
+    --text-color:#9597A5;
+    --green-linear:(135deg, #33D35E 0%, #2AB6D9 99.58%);
+    --heading-color:#2D314D;
+    --green-hover:#30C88F;
+
+}
+
+/* FONTS */
+@font-face {
+    font-family: 'Public Sans';
+    src: url('../fonts/PublicSans-Thin.woff2') format('woff2'),
+        url('../fonts/PublicSans-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('../fonts/PublicSans-Regular.woff2') format('woff2'),
+        url('../fonts/PublicSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('../fonts/PublicSans-Medium.woff2') format('woff2'),
+        url('../fonts/PublicSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 html{
     box-sizing:border-box;
     height: 100%;
@@ -15,11 +52,12 @@ body{
     height: 100%;
     padding:0;
     margin:0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Public Sans', sans-serif;
     font-size:16px;
-    line-height: 1.5;
+    font-weight: 400;
+    line-height: 26px;
     background-color:#fff;
-    color:#222;
+    color:var(--text-color);
 
 }
 img{
@@ -30,106 +68,77 @@ img{
 /* CONTAINER */
 .container{
     width: 100%;
-    min-width: 1000px;
-    padding-left: 125px;
-    padding-right: 125px;
+    max-width: 1150px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 30px;
     margin-right: auto;
     margin-left: auto;
-}
-/* HERO */
-.hero{
-    background-image:url("../img/intro-bg.png");
-    background-repeat:no-repeat;
-    background-position:right bottom;
-    border-bottom: 0 solid;
 }
 /* MAIN_CONTENT */
 .main-content{
     flex-grow: 1;
 }
-
+/* BUTTON */
+.button {
+    padding: 8px 36px 8px 33px;
+    border-radius: 22px;
+    border:0;
+    background: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
+    cursor:pointer    
+}
+.main-button {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+}
+.main-button:hover{
+    opacity: 0.6;
+}
+.main-button:active{
+    opacity: 0.4;
+}
 /* SITE-HEADER */
 .site-header {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.site-header__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
 }
 
-.site-navbar {
+.logo__img {
+    width: 139px;
+    height: 20px;
+}
+.sitenav__list {
     display: flex;
+    align-items: center;
+    list-style: none;
+}
+.sitenav__item:not(:last-child) {
+    margin-right: 30px;
+}
+.sitenav__link {
     text-decoration: none;
-    justify-content: space-between;
-}
-.site-navbar-item {
-    display: flex;
-    flex-wrap: wrap;
-
-
-}
-.site-navbar-item:not(:last-child){
-    padding-right: 30px;
-}
-.site-navbar-link{
-    text-decoration: none;
-    color:#333;
-    text-align: center;
-    font-size: 15px;
-    font-style: normal;
+    color:var(--text-color);
+    font-size:14px;
     font-weight: 400;
-    line-height: 150%; /* 22.5px */
+    line-height: normal;
+    letter-spacing: -0.108px;
+    border-bottom:4px solid transparent;
 }
-.border-bottom{
-    border-bottom: 1px solid;
-    color:#666;
+.sitenav__link:hover{
+    color:var(--heading-color);
+    padding-bottom: 28px;
+    border-bottom-color:var(--green-hover);
 }
-/* Main-content */
-.describe-freedom {
-    max-width: 490px;
-    padding-top: 140px;
-}
-.intro-heading {
-    color:#000;
-    font-family:Roboto;
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 60px;
-    margin: 0;
-    margin-bottom: 30px;
-}
-.intro-heading-text {
-    color:#777;
-    font-size:16px;
-    font-weight: 400;
-    line-height: 24px;
-    border-left: 3px solid;
-    
-}
-.intro-heading-text:not(:last-child){
-    padding-left: 40px;
-}
-.button {
-    padding:12px;
-    margin-top: 30px;
-    margin-bottom: 190px;
-    background-color:#EA625C;
-    color:#fff;
-    text-decoration: none;
-    display: flex;
-    width: 260px;
-    justify-content: center;
-    align-items:center;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 27px;
-    font-style:normal;
-}
-
-
-
-
-
-
-
 
 
 
