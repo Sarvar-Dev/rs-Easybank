@@ -324,6 +324,9 @@ img{
 }
 .footer__icons {
     margin-right: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .site-footer__logo {
     margin-bottom: 55px;
@@ -385,8 +388,12 @@ img{
 .footer__latest {
     margin-left: 293px;
     text-align: end;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 .footer__copyright {
+
     font-size: 15px;
     letter-spacing: -0.234px;
     margin-top: 23px;
